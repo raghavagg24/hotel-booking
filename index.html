@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Stay - Hotel Booking</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Royal<span>Stay</span></div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#booking">Book Now</a></li>
+            </ul>
+
+            <button class="menu-btn">☰</button>
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <p class="small-title">WELCOME TO ROYAL STAY</p>
+
+            <h1>Experience Luxury<br>Like Never Before</h1>
+
+            <p>
+                Relax, refresh and enjoy your stay at one of the
+                finest hotels in the city.
+            </p>
+
+            <a href="#booking" class="hero-btn">Book Your Stay</a>
+        </div>
+
+    </section>
+
+
+    <!-- ROOMS SECTION -->
+    <section class="rooms-section" id="rooms">
+
+        <div class="section-heading">
+            <p>OUR ROOMS</p>
+            <h2>Choose Your Perfect Room</h2>
+        </div>
+
+        <div class="rooms-container">
+
+            <!-- ROOM 1 -->
+            <div class="room-card">
+
+                <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=900&q=80"
+                     alt="Deluxe Room">
+
+                <div class="room-info">
+
+                    <h3>Deluxe Room</h3>
+
+                    <p>
+                        Comfortable room with a king-size bed,
+                        beautiful interior and city view.
+                    </p>
+
+                    <div class="room-bottom">
+                        <strong>₹3,000 <small>/ night</small></strong>
+
+                        <button onclick="selectRoom('Deluxe Room', 3000)">
+                            Select
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- ROOM 2 -->
+            <div class="room-card">
+
+                <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=900&q=80"
+                     alt="Premium Room">
+
+                <div class="room-info">
+
+                    <h3>Premium Room</h3>
+
+                    <p>
+                        Spacious premium room with elegant furniture,
+                        balcony and premium facilities.
+                    </p>
+
+                    <div class="room-bottom">
+                        <strong>₹5,000 <small>/ night</small></strong>
+
+                        <button onclick="selectRoom('Premium Room', 5000)">
+                            Select
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- ROOM 3 -->
+            <div class="room-card">
+
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80"
+                     alt="Luxury Suite">
+
+                <div class="room-info">
+
+                    <h3>Luxury Suite</h3>
+
+                    <p>
+                        Experience ultimate luxury with a large
+                        living area, bedroom and private view.
+                    </p>
+
+                    <div class="room-bottom">
+                        <strong>₹8,000 <small>/ night</small></strong>
+
+                        <button onclick="selectRoom('Luxury Suite', 8000)">
+                            Select
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80"
+                 alt="Hotel">
+        </div>
+
+        <div class="about-content">
+
+            <p class="section-title">ABOUT ROYAL STAY</p>
+
+            <h2>Your Comfort Is Our Priority</h2>
+
+            <p>
+                Royal Stay is designed to give you a relaxing and
+                unforgettable experience. From comfortable rooms
+                to delicious food and excellent service, we take
+                care of every detail.
+            </p>
+
+            <div class="features">
+
+                <div>
+                    <span>✓</span>
+                    Free Wi-Fi
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Swimming Pool
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    24/7 Service
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Free Parking
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOOKING SECTION -->
+    <section class="booking-section" id="booking">
+
+        <div class="section-heading">
+            <p>RESERVATION</p>
+            <h2>Book Your Stay</h2>
+        </div>
+
+        <form id="bookingForm">
+
+            <div class="form-group">
+
+                <label>Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Check-in</label>
+                    <input type="date" id="checkin" required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Check-out</label>
+                    <input type="date" id="checkout" required>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Guests</label>
+
+                    <select id="guests">
+
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Room</label>
+
+                    <select id="room">
+
+                        <option value="3000">Deluxe Room - ₹3,000</option>
+                        <option value="5000">Premium Room - ₹5,000</option>
+                        <option value="8000">Luxury Suite - ₹8,000</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="price-box">
+
+                <p>Total Amount</p>
+
+                <h3 id="totalPrice">₹3,000</h3>
+
+            </div>
+
+
+            <button type="submit" class="book-btn">
+                Confirm Booking
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">Royal<span>Stay</span></div>
+
+        <p>
+            © 2026 Royal Stay. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- SUCCESS POPUP -->
+    <div class="popup" id="popup">
+
+        <div class="popup-box">
+
+            <div class="success-icon">✓</div>
+
+            <h2>Booking Confirmed!</h2>
+
+            <p id="confirmationText">
+                Your room has been successfully booked.
+            </p>
+
+            <button onclick="closePopup()">Done</button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
